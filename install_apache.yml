@@ -3,6 +3,7 @@
   become: true
   tasks:
 
+<<<<<<< HEAD
     - name: install apache2 and php package for Ubuntu and CentOS
       ansible.builtin.package:
          name:
@@ -10,4 +11,13 @@
           - "{{ php_package }}"
          state: latest
          update_cache: yes
+=======
+    - name: install apache2 package
+      apt:
+         name: apache2
+
+    - name: add PHP support for apache
+      apt:
+        name: libapache2-mod-php
+>>>>>>> 0a800fbab89f2f98615775b70a30358665337a1b
 
